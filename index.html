@@ -217,6 +217,12 @@
       margin-top: 24px;
     }
 
+    .download-action-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .final-download-btn {
       width: 100%; 
       min-height: 180px; 
@@ -241,6 +247,14 @@
       border-radius: 16px;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .download-action-note {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      text-align: center;
+      letter-spacing: 0.04em;
     }
 
     h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.01em; }
@@ -522,10 +536,13 @@
           <div class="phone-mockup"><img src="./09.jpg" alt="留白"></div>
           <h3>简洁界面</h3>
           <div class="final-download-actions">
-            <a href="#" class="download-btn final-download-btn" id="finalDownloadBtn">
-              <img src="./pickbanklogo.jpg" alt="Pickbank App Icon" class="final-btn-logo">
-              <span>获取Pickbank Android/拾念记账</span>
-            </a>
+            <div class="download-action-item">
+              <a href="#" class="download-btn final-download-btn" id="finalDownloadBtn">
+                <img src="./pickbanklogo.jpg" alt="Pickbank App Icon" class="final-btn-logo">
+                <span>获取Pickbank Android/拾念记账</span>
+              </a>
+              <p class="download-action-note">密码:df8t</p>
+            </div>
             <a href="#" class="download-btn final-download-btn" id="finalDownloadBtnIOS">
               <img src="./pickbanklogo.jpg" alt="Pickbank App Icon" class="final-btn-logo">
               <span>获取Pickbank IOS</span>
@@ -727,7 +744,7 @@
 
     // ====== 按钮点击滚动、下载与统计逻辑 ============
     const finalSection = document.getElementById('download-container');
-    const nonAndroidHelpUrl = 'https://pickwebguide.netlify.app/';
+    const nonAndroidHelpUrl = 'https://pickappsguide.pages.dev/';
 
     // 可选配置：
     // 1) 请把 ga4MeasurementId 改成你的 GA4 Measurement ID（例如 G-ABCDEFG123）
@@ -818,7 +835,7 @@
       {
         heroId: 'heroDownloadBtn',
         finalId: 'finalDownloadBtn',
-        targetUrl: 'https://github.com/smartlotus/pickbankwebs/releases/download/v1.0.3/Pickbank_v1.0.3.apk',
+        targetUrl: 'https://wwamm.lanzouv.com/iOFEl3ky2igj',
         analyticsEvent: 'download_android',
         analyticsLabel: 'android_apk'
       },
